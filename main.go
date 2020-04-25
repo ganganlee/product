@@ -3,12 +3,22 @@ package main
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"go.uber.org/zap"
 	"product.zozoo.net/Server"
 	"product.zozoo.net/config"
+	"product.zozoo.net/library"
 	"product.zozoo.net/route"
 )
 
+//声明日志类全局变量
+var Log *zap.Logger
+
 func main()  {
+
+	//初始化日志库
+	Log = library.InitLogger()
+
+	Log.Info("启动项目")
 	r := gin.Default()
 
 	//初始化配置文件
