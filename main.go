@@ -18,7 +18,6 @@ func main()  {
 	//初始化日志库
 	Log = library.InitLogger()
 
-	Log.Info("启动项目")
 	r := gin.Default()
 
 	//初始化配置文件
