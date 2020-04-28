@@ -7,3 +7,4 @@
 2020-04-26T08:19:02.852+0800	INFO	product.zozoo.net/main.go:21	启动项目
 2020-04-26T08:21:16.803+0800	INFO	product.zozoo.net/main.go:21	启动项目
 2020-04-26T08:22:42.340+0800	INFO	product.zozoo.net/main.go:21	启动项目
+2020-04-28T08:37:44.628+0800	ERROR	controller/orderController.go:32	订单添加失败	{"struct": "{\"ID\":0,\"CreatedAt\":\"2020-04-28T08:37:44.6264932+08:00\",\"UpdatedAt\":\"2020-04-28T08:37:44.6264932+08:00\",\"DeletedAt\":null,\"user_id\":1,\"product_id\":1,\"status\":1}"}
