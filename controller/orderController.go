@@ -51,7 +51,7 @@ func UpdateOrder(c *gin.Context) {
 	}
 
 	//获取订单Id
-	id, err := strconv.Atoi(c.PostForm("id"))
+	id, err := strconv.Atoi(c.Param("id"))
 	if err != nil {
 		ResponseError(c, "", err.Error())
 		return
@@ -65,7 +65,7 @@ func UpdateOrder(c *gin.Context) {
 //删除订单
 func DeleteOrder(c *gin.Context) {
 	//获取订单Id
-	id, err := strconv.Atoi(c.PostForm("id"))
+	id, err := strconv.Atoi(c.Param("id"))
 	if err != nil {
 		ResponseError(c, "", err.Error())
 		return
@@ -94,7 +94,7 @@ func GetOrderAll(c *gin.Context) {
 
 //获取单个订单
 func GetOrderById(c *gin.Context) {
-	id, err := strconv.Atoi(c.PostForm("id"))
+	id, err := strconv.Atoi(c.Param("id"))
 	if err != nil {
 		ResponseError(c, "", err.Error())
 		return
@@ -113,14 +113,14 @@ func GetOrderById(c *gin.Context) {
 //根据商品id获取所有订单
 func GetOrderWhitProduct(c *gin.Context){
 	//获取商品ID
-	id,err := strconv.Atoi(c.PostForm("id"))
+	id,err := strconv.Atoi(c.Param("id"))
 	if err != nil{
 		ResponseError(c, "", "参数错误")
 		return
 	}
 
 	//实例化商品模型
-	var product = new(Product)
+	var product Product
 	product.ID = uint(id)
 	var Orders []Order
 	Db.Model(product).Related(Orders)
