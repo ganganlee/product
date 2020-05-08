@@ -28,7 +28,7 @@ func InitMysql() error {
 	db.DB().SetMaxOpenConns(MaxOpenConns)
 
 	//数据迁移
-	db.AutoMigrate(&model.Product{},&model.Order{})
+	db.AutoMigrate(&model.Product{},&model.Order{},&model.User{})
 
 	Db = db
 	return nil

@@ -7,5 +7,5 @@ require (
 	github.com/jinzhu/gorm v1.9.12
 	github.com/spf13/viper v1.6.3
 	go.uber.org/zap v1.15.0
-	golang.org/x/crypto v0.0.0-20200429183012-4b2356b1ed79 // indirect
+	golang.org/x/crypto v0.0.0-20200429183012-4b2356b1ed79
 )

@@ -26,4 +26,11 @@ func RegisterRoute(c *gin.Engine){
 		order.PUT("/:id",controller.UpdateOrder)//修改订单
 		order.DELETE("/:id",controller.DeleteOrder)//删除订单
 	}
+
+	//用户管理
+	user := c.Group("/user")
+	{
+		user.POST("/",controller.CreateUser)
+		user.GET("/",controller.SelectUser)
+	}
 }
